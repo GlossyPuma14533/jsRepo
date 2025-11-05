@@ -1,3 +1,4 @@
+/*
 class CalendarDay {
     // Private fields
     #month;
@@ -17,4 +18,27 @@ class CalendarDay {
 
 // Using our new class
 let day1 = new CalendarDay(2,12,2022);
-console.log(day1.toString());
+console.log(day1.toString());*/
+
+
+class playerStats {
+    #name;
+    #level;
+    #health;
+    #stamina;
+    #damage;
+
+    constructor(name, level, health, stamina, damage) {
+        this.name = name;
+        this.level = level; 
+        this.health = health;
+        this.stamina = stamina;
+        this.damage = damage;
+    }
+    toString() {
+        return `${this.name} Level: ${this.level}\n${this.health}\n${this.stamina}\n${this.damage}`;
+    }
+}
+
+let player1 = new playerStats("Hollow Knight", 3, 10, 5, 4);
+console.log(player1.toString());
