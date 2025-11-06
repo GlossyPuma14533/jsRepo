@@ -1,4 +1,8 @@
+// declare constants
+const newLineChar = "\n";
 
+
+// declare classes
 class CalendarDay {
     // Private fields
     #month;
@@ -16,11 +20,6 @@ class CalendarDay {
     }
 }
 
-// Using our new class
-let day1 = new CalendarDay(2,12,2022);
-console.log(day1.toString());
-
-
 class playerStats {
     #name;
     #level;
@@ -36,9 +35,16 @@ class playerStats {
         this.damage = damage;
     }
     toString() {
-        return `${this.name} | Level: ${this.level}\nHealth: ${this.health}\nStamina: ${this.stamina}\nDps: ${this.damage}`;
+        return `${this.name} | Level: ${this.level}${newLineChar}Health: ${this.health}${newLineChar}Stamina: ${this.stamina}${newLineChar}Dps: ${this.damage}`;
     }
 }
 
+// code execution
+
+// Using our playerStats class
 let player1 = new playerStats("Hollow Knight", 3, 10, 5, 4);
 console.log(player1.toString());
+
+// Using our new CalendarDay class
+let day1 = new CalendarDay(2,12,2022);
+console.log(day1.toString());
